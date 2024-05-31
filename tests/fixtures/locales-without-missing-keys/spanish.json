@@ -1,0 +1,22 @@
+{
+  "home": {
+    "title": "Revisa tus traducciones",
+    "content": {
+      "why": {
+        "title": "Manejar traducciones en múltiples idiomas en tu aplicación es difícil, estamos para ayudarte"
+      },
+      "about": {
+        "title": "Somos un proyecto open source, si quieres contribuir, ¡bienvenido!"
+      }
+    }
+  },
+  "help": {
+    "title": "¿Necesitas ayuda?",
+    "content": {
+      "issues": {
+        "title": "Si tienes algún problema, escribe un issue en el repositorio de github",
+        "description": "Intentaremos resolverlo lo antes posible"
+      }
+    }
+  }
+}

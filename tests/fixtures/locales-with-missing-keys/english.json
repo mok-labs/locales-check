@@ -1,0 +1,15 @@
+{
+  "home": {
+    "title": "Check your translations",
+    "content": {}
+  },
+  "help": {
+    "title": "Do you need help?",
+    "content": {
+      "issues": {
+        "title": "If you have any issues, please report them on the GitHub repository.",
+        "description": "We will try to fix them as soon as possible."
+      }
+    }
+  }
+}
