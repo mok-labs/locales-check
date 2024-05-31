@@ -1,7 +1,7 @@
 README
-# locales-check
+# @mok-labs/locales-check
 
-`locales-check` is a tiny library designed to identify discrepancies between your locale files by detecting missing keys. It analyzes the combined structure of all your locale files and provides a report on any absent keys. Currently, the library supports only JSON files, which must be stored in the same locales directory.
+`@mok-labs/locales-check` is a tiny library designed to identify discrepancies between your locale files by detecting missing keys. It analyzes the combined structure of all your locale files and provides a report on any absent keys. Currently, the library supports only JSON files, which must be stored in the same locales directory.
 
 ## Content
 - [Why?](#why)
@@ -20,11 +20,11 @@ Install the package in your project:
 With npm
 
 ```sh
-npm install --save-dev locales-check
+npm install --save-dev @mok-labs/locales-check
 ```
 With yarn
 ```sh
-yarn add -D locales-check
+yarn add -D @mok-labs/locales-check
 ```
 
 
@@ -33,7 +33,7 @@ Use it via script in your `package.json` file:
 ```json
 {
   "scripts": {
-    "locales-check": "locales-check --localesPath='./path/to/locales-files/'"
+    "locales-check": "npx @mok-labs/locales-check --localesPath='./path/to/locales-files/'"
   }
 }
 ```
