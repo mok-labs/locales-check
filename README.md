@@ -57,7 +57,13 @@ Use it via script in your `package.json` file:
 * Type: `boolean`
 * Description: Causes the process to exit with exit code 1 if at least one translation key is missing or unused (useful if it is part of a CI pipeline).
 
+## Contributing
 
+Before getting started, please review our [Contribution Guide](CONTRIBUTING.md) to ensure a smooth collaboration.
+
+## Changelog
+
+Stay updated with the latest changes and improvements by checking out our [Changelog](CHANGELOG.md). 
 
 ## License
 
