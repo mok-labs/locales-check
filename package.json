@@ -1,6 +1,6 @@
 {
   "name": "@mok-labs/locales-check",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Checks missing keys in your locales files",
   "bin": "bin/locales-check-cli.js",
   "scripts": {
