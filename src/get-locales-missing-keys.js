@@ -1,4 +1,6 @@
 const isObject = require('./is-object');
+const { isBaseLocale } = require('./get-locale-info');
+const getLocalesStructure = require('./get-locales-structure');
 
 function getObjectPaths(initialObject) {
   const stack = [{ obj: initialObject, path: [] }];
@@ -44,12 +46,32 @@ function findMissingKeys(baseObj, compareObj, path = '') {
   return missingKeys;
 }
 
-function getLocalesMissingKeys(merged, objects) {
+function getLocalesMissingKeys(mergedStructure, objects) {
+  const baseLocales = {};
+  for (const [fileName, content] of Object.entries(objects)) {
+    if (isBaseLocale(fileName)) {
+      baseLocales[fileName] = content;
+    }
+  }
+
   const result = {};
-  for (const [name, obj] of Object.entries(objects)) {
-    const missingKeys = findMissingKeys(merged, obj);
-    if (missingKeys.length > 0) {
-      result[name] = missingKeys;
+
+  if (Object.keys(baseLocales).length > 0) {
+    const baseLocalesArray = Object.values(baseLocales);
+    const mergedBaseStructure = getLocalesStructure(baseLocalesArray);
+
+    for (const [fileName, content] of Object.entries(baseLocales)) {
+      const missingKeys = findMissingKeys(mergedBaseStructure, content);
+      if (missingKeys.length > 0) {
+        result[fileName] = missingKeys;
+      }
+    }
+  } else {
+    for (const [fileName, content] of Object.entries(objects)) {
+      const missingKeys = findMissingKeys(mergedStructure, content);
+      if (missingKeys.length > 0) {
+        result[fileName] = missingKeys;
+      }
     }
   }
 
